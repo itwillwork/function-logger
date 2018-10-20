@@ -3,7 +3,7 @@ function wrap (func, forcedDisplayedName) {
 
   return (...args) => {
     console.group(
-			'%c called',
+			'%c[function-logger] called',
 			'color: #848d95; font-weight: normal;',
 			funcName
 		);
@@ -43,12 +43,12 @@ function wrap (func, forcedDisplayedName) {
 
 module.exports = function (...args) {
 	if (args.length > 2) {
-		console.error('function-logger: Too many arguments');
+		console.error('[function-logger] Error: Too many arguments');
 		return null;
 	}
 
 	if (args.length === 0) {
-		console.error('function-logger: Too few arguments');
+		console.error('[function-logger] Error: Too few arguments');
 		return null;
 	}
 
@@ -73,7 +73,7 @@ module.exports = function (...args) {
 	});
 
 	if (!func) {
-		console.error('function-render: One of the arguments must be a function');
+		console.error('[function-logger] Error: One of the arguments must be a function');
 		return null;
 	}
 
