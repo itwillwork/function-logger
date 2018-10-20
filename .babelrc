@@ -5,7 +5,7 @@
   "plugins": [
     ["transform-es2015-modules-umd", {
       "globals": {
-        "src/index": "clearRender"
+        "src/index": "functionLogger"
       },
       "exactGlobals": true
     }]
