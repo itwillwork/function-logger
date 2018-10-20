@@ -1,7 +1,7 @@
 {
   "name": "function-logger",
   "description": "Logging of the input and output arguments of the function on each call",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "homepage": "https://github.com/itwillwork/clear-render",
   "license": "MIT",
   "author": "itwillwork <nurullin_edgar@mail.ru>",

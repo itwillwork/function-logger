@@ -9,7 +9,7 @@ function doJob(job) {
   return 'job report: ' + job;
 }
 
-// foo('bar')
+// doJob('run')
 functionLogger(doJob)('run');
 ```
 output in console
