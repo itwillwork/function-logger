@@ -1,4 +1,4 @@
-# clear-render
+# function-logger
 Logging of the input and output arguments of the function on each call.
 
 ## Contributing
