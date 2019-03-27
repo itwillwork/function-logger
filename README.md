@@ -1,22 +1,28 @@
 # function-logger
-Logging of the input and output arguments of the function on each call.
-## Example
-code
+Awesome tool for [FP JS](https://github.com/stoeffel/awesome-fp-js). Logging of the input and output arguments of the function on each call.
+
+[JSBin demo](https://jsbin.com/sayujal/1/edit?js)
+
+## Motivation
+for example, debugging sort products code:
 ```javascript
-function doJob(job) {
-  console.log('I did the job: ' + job);
-  
-  return 'job report: ' + job;
-}
+const byPrice = order => (a, b) => order(a.price, b.price);
 
-// doJob('run')
-functionLogger(doJob)('run');
+const asc = (a, b) => a - b;
+const desc = (a, b) => b - a;
+
+const products = [{price: 100}, {price: 50}, {price: 300}];
+
+// products.sort(byPrice(desc));
+
+// use functionLogger for fast logging
+products.sort(functionLogger(byPrice(desc)));
 ```
-output in console
+browser console output 
 
-<img width="450" alt="output" src="https://user-images.githubusercontent.com/15855766/47255630-01bd8c00-d47d-11e8-9c06-9d6d672c0b23.png">
+<img width="1000" alt="output" src="https://github.com/itwillwork/function-logger/blob/master/media/demo.png?raw=true">
 
-## Install
+### Installation
 
 ```
 npm install function-logger --save-dev
@@ -39,6 +45,8 @@ in html area
 <script src="https://unpkg.com/function-logger@latest/build/umd/index.js"></script>
 ```
 in js area use ```functionLogger``` from global scope
+
+[JSBin demo](https://jsbin.com/sayujal/1/edit?js)
 
 ## Contributing
 Got ideas on how to make this better? Open an issue!
